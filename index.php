@@ -14,6 +14,9 @@ switch ($action) {
     case 'store':
         $controller->store();
         break;
+    case 'delete':
+        $controller->delete();
+        break;
     default:
         $controller->listarAlunos();
 }

@@ -34,6 +34,15 @@ class AlunoController
         header("Location: index.php");
 
 
+
+    }
+    public function delete()
+    {
+        $id = $_GET["id"];
+        $model = new Aluno($this->conn);
+        $model->delete($id);
+
+        header("Location: index.php");
     }
 
 }

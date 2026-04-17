@@ -15,10 +15,16 @@ class Aluno
         mysqli_query($this->conn, $sql);
     }
 
-    public function listarAlunos(){
+    public function listarAlunos()
+    {
 
         $sql = "SELECT * FROM alunos";
         return mysqli_query($this->conn, $sql);
+    }
+    public function delete($id)
+    {
+        $sql = "DELETE FROM alunos WHERE id = $id";
+        mysqli_query($this->conn, $sql);
     }
 
 }

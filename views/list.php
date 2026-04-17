@@ -8,6 +8,7 @@
 </head>
 
 <body>
+    <a href="index.php?action=create"></a>
     <table>
         <tr>
             <td>ID</td>
@@ -24,7 +25,7 @@
                 <td><?php echo $row["email"]; ?></td>
                 <td><?php echo $row["idade"]; ?></td>
                 <td>
-                    Ações
+                    <a href="index.php?action=delete&id=<?php echo $row["id"]; ?>">Excluir</a>
                 </td>
             </tr>
         <?php } ?>

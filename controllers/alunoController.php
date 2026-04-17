@@ -12,12 +12,13 @@ class AlunoController
     public function listarAlunos()
     {
         $model = new Aluno($this->conn);
-        $aluno = $model->listarAlunos();
-        require "views/create.php";
+        $alunos = $model->listarAlunos();
+        require "views/list.php";
+
+
     }
     public function create()
     {
-
         require "views/create.php";
     }
 

@@ -1,12 +1,11 @@
 <?php
 
 require "config/database.php";
-require "controllers/aluno";
+require "controllers/alunoController.php";
 
 
 $controller = new AlunoController($conn);
-// http://http://localhost/CRUD_MVC_AULA03/index.php?action=create
-$action = $_GET["action"];
+$action = $_GET["action"] ?? 'index';
 
 switch ($action) {
     case 'create':
@@ -15,6 +14,8 @@ switch ($action) {
     case 'store':
         $controller->store();
         break;
+    default:
+        $controller->listarAlunos();
 }
 
 ?>

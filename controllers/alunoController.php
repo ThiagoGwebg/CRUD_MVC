@@ -8,6 +8,13 @@ class AlunoController
     {
         $this->conn = $conn;
     }
+
+    public function listarAlunos()
+    {
+        $model = new Aluno($this->conn);
+        $aluno = $model->listarAlunos();
+        require "views/create.php";
+    }
     public function create()
     {
 
